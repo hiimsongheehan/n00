@@ -1,0 +1,17 @@
+# Only publish runtime sources and deployment tooling.
+/*
+!/*.html
+!/*.css
+!/*.js
+!/assets/
+!/tests/
+!/scripts/
+!/.github/
+!/.gitignore
+!/DEPLOYMENT.md
+.DS_Store
+**/.DS_Store
+**/.env*
+**/node_modules/
+__pycache__/
+_site/

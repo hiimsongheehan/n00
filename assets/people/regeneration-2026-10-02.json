@@ -1,0 +1,83 @@
+[
+  {
+    "index": 2,
+    "result": {
+      "results": [
+        {
+          "id": "632491ee-d3ec-4e19-a6fe-20ad0fe9d0e1",
+          "type": "video",
+          "status": "pending",
+          "model": "seedance_2_0",
+          "params": {
+            "prompt": "Animate this exact reference portrait as a restrained beauty model at normal real-time speed. CRITICAL: preserve the source image composition, original aspect ratio, subject scale, face proportions, head height and shoulders exactly. Entire crown and all hair must remain visible with the SAME clear headroom as the reference throughout all frames. Locked tripod camera, fixed lens, no zoom, no push-in, no reframing, no vertical squash or stretch, no crop, no changing distance to camera. Do not enlarge the face or move the subject upward. Plain opaque pure white studio background throughout. Preserve identity, makeup, hairstyle and black clothing. Only very subtle natural movement: One natural blink, a tiny eye glance just off lens then back. Head stays still. No talking, no hands, no large pose changes, no slow motion. Single continuous shot.",
+            "aspect_ratio": "auto",
+            "duration": 5,
+            "reference_images": [
+              "f7ba16bf-acb3-4dc8-832f-e91a31703d64"
+            ],
+            "resolution": "1080p",
+            "mode": "std",
+            "generate_audio": false
+          }
+        }
+      ]
+    },
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20261002_133717_632491ee-d3ec-4e19-a6fe-20ad0fe9d0e1.mp4",
+    "local_file": "2-motion.mp4"
+  },
+  {
+    "index": 6,
+    "result": {
+      "results": [
+        {
+          "id": "cc34d283-ce06-447c-8e94-5cb6e1d583fd",
+          "type": "video",
+          "status": "pending",
+          "model": "seedance_2_0",
+          "params": {
+            "prompt": "Animate this exact reference portrait as a restrained beauty model at normal real-time speed. CRITICAL: preserve the source image composition, original aspect ratio, subject scale, face proportions, head height and shoulders exactly. Entire crown and all hair must remain visible with the SAME clear headroom as the reference throughout all frames. Locked tripod camera, fixed lens, no zoom, no push-in, no reframing, no vertical squash or stretch, no crop, no changing distance to camera. Do not enlarge the face or move the subject upward. Plain opaque pure white studio background throughout. Preserve identity, makeup, hairstyle and black clothing. Only very subtle natural movement: A tiny relaxed head tilt of no more than two degrees, one natural blink. Keep the braid still. No talking, no hands, no large pose changes, no slow motion. Single continuous shot.",
+            "aspect_ratio": "auto",
+            "duration": 5,
+            "reference_images": [
+              "4d164606-1acd-4cae-948f-bba5de7c0605"
+            ],
+            "resolution": "1080p",
+            "mode": "std",
+            "generate_audio": false
+          }
+        }
+      ]
+    },
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20261002_133719_cc34d283-ce06-447c-8e94-5cb6e1d583fd.mp4",
+    "local_file": "6-motion.mp4"
+  },
+  {
+    "index": 8,
+    "result": {
+      "results": [
+        {
+          "id": "260fdec4-5e8d-40da-916b-00ea1ed25ccf",
+          "type": "video",
+          "status": "pending",
+          "model": "seedance_2_0",
+          "params": {
+            "prompt": "Animate this exact reference portrait as a restrained beauty model at normal real-time speed. CRITICAL: preserve the source image composition, original aspect ratio, subject scale, face proportions, head height and shoulders exactly. Entire crown and all hair must remain visible with the SAME clear headroom as the reference throughout all frames. Locked tripod camera, fixed lens, no zoom, no push-in, no reframing, no vertical squash or stretch, no crop, no changing distance to camera. Do not enlarge the face or move the subject upward. Plain opaque pure white studio background throughout. Preserve identity, makeup, hairstyle and black clothing. Only very subtle natural movement: A small natural eye glance toward the lens, and a subtle relaxation of the parted lips. No exaggerated surprise. No talking, no hands, no large pose changes, no slow motion. Single continuous shot.",
+            "aspect_ratio": "auto",
+            "duration": 5,
+            "reference_images": [
+              "6dc8e8d4-62bf-40cb-9854-2beda4820c6d"
+            ],
+            "resolution": "1080p",
+            "mode": "std",
+            "generate_audio": false
+          }
+        }
+      ]
+    },
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20261002_133724_260fdec4-5e8d-40da-916b-00ea1ed25ccf.mp4",
+    "local_file": "8-motion.mp4"
+  }
+]

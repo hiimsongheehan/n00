@@ -1,0 +1,83 @@
+[
+  {
+    "index": 1,
+    "job_id": "90b34bb5-0840-4414-96f8-6fe8087328de",
+    "model": "seedance_2_0",
+    "duration": 4,
+    "resolution": "1080p",
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20260927_023925_90b34bb5-0840-4414-96f8-6fe8087328de.mp4",
+    "background_test": {
+      "file": "1-white-test.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo remains; sample enabled."
+    },
+    "background_removal": {
+      "file": "1-white.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo; reviewed sampled frames."
+    }
+  },
+  {
+    "index": 2,
+    "job_id": "814a6152-1160-4b96-a8b2-67c335e43cfc",
+    "model": "seedance_2_0",
+    "duration": 4,
+    "resolution": "1080p",
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20260927_023929_814a6152-1160-4b96-a8b2-67c335e43cfc.mp4",
+    "background_removal": {
+      "file": "2-white.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo; reviewed sampled frames."
+    }
+  },
+  {
+    "index": 3,
+    "job_id": "d8e3082a-7b59-4a1d-a363-f310073a4c42",
+    "model": "seedance_2_0",
+    "duration": 4,
+    "resolution": "1080p",
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20260927_023936_d8e3082a-7b59-4a1d-a363-f310073a4c42.mp4",
+    "background_removal": {
+      "file": "3-white.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo; reviewed sampled frames."
+    }
+  },
+  {
+    "index": 4,
+    "job_id": "74ba5369-1614-4327-90d4-9658cd668dc4",
+    "model": "seedance_2_0",
+    "duration": 4,
+    "resolution": "1080p",
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20260927_023944_74ba5369-1614-4327-90d4-9658cd668dc4.mp4",
+    "background_removal": {
+      "file": "4-white.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo; reviewed sampled frames."
+    }
+  },
+  {
+    "index": 0,
+    "job_id": "1f59d017-9e4c-40d8-8ffc-72c6aa02e3be",
+    "model": "seedance_2_0",
+    "duration": 4,
+    "resolution": "1080p",
+    "status": "completed",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3E4v6OtjtgAxk9zTNcGoZJgcbpN/hf_20260927_023948_1f59d017-9e4c-40d8-8ffc-72c6aa02e3be.mp4",
+    "background_removal": {
+      "file": "0-white.mp4",
+      "method": "RVM MobileNetV3, white composite",
+      "source": "https://github.com/PeterL1n/RobustVideoMatting",
+      "note": "Minor hair-edge halo; reviewed sampled frames."
+    }
+  }
+]

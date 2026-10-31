@@ -1,0 +1,39 @@
+/* Scoped category gallery, retaining N00 typography and navigation. */
+#categories .category-heading{padding:6vh 0 5vh;gap:32px}
+#categories .category-heading h1{font-size:clamp(36px,4.8vw,104px);line-height:1.06}
+#categories .category-heading h1 br{display:none}
+#categories .category-heading h1 br:after{content:' '}
+#categories .category-heading h1 em{margin-left:.15em}
+#categories .category-heading p{display:none}
+#categories .category-grid{gap:clamp(12px,1.2vw,28px);border:0}
+#categories .category{height:auto;aspect-ratio: .63;min-height:0;border:0;border-radius:18px;padding:0;background:#f4f4f3;isolation:isolate;transition:background .25s}
+#categories .category-title{position:absolute;left:7%;top:5%;font-size:clamp(28px,3.5vw,72px);line-height:1;letter-spacing:-.055em;font-weight:600;color:#4b4b4b;z-index:2;pointer-events:none}
+#categories .cat-num{position:absolute;right:7%;top:6%;padding:5px 12px;border-radius:50px;background:#4b4b4b;color:white;font-size:clamp(9px,.65vw,14px);z-index:2}
+#categories .cat-art{inset:0;clip-path:none;background:transparent;transition:none;z-index:0}
+#categories .cat-art>.category-product{position:absolute;inset:14% 10% 18%;width:80%;height:68%;object-fit:contain;transform:none;transition:opacity .3s ease}
+#categories .cat-art>.category-model{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:0;transform:none;transition:opacity .3s ease}
+#categories .cat-name{left:7%;bottom:7%;font-size:clamp(16px,1.25vw,27px);letter-spacing:0;pointer-events:none}
+#categories .cat-name small{font-size:clamp(11px,.85vw,18px);margin-top:6px;color:#777}
+#categories .cat-arrow{right:7%;bottom:10%;font-size:24px;z-index:2;pointer-events:none}
+#categories .category-editorial{position:absolute;inset:0;display:flex;align-items:center;padding:7%;font-size:clamp(25px,2.7vw,58px);line-height:1.02;letter-spacing:-.045em;color:#C21F1A}
+#categories .category[data-category=all]{background:#eeeae5}
+#categories .category[data-category=all] .cat-num{display:none}
+#categories .category.has-model:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#fff 0%,#ffffffec 12%,transparent 42%,#ffffff80 100%);opacity:0;transition:opacity .3s;z-index:1;pointer-events:none}
+#categories .category.has-model:focus-visible .category-model,#categories .category.has-model:focus-visible:after{opacity:1}
+#categories .category.has-model:focus-visible .category-product{opacity:0}
+#categories .category[data-category=all].has-model .category-model{opacity:1}
+#categories .category[data-category=all].has-model:after{opacity:1}
+#categories .category[data-category=all].has-model .category-editorial{display:none}
+@media(hover:hover){#categories .category.has-model:hover .category-model,#categories .category.has-model:hover:after{opacity:1}#categories .category.has-model:hover .category-product{opacity:0}}
+@media(max-width:700px){#categories .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#categories .category-title{font-size:32px}#categories .category-editorial{font-size:25px}#categories .cat-num{padding:3px 6px;font-size:8px}#categories .category{border-radius:12px}#categories .category-heading h1{font-size:36px}#categories .cat-name{font-size:16px}}
+@media(prefers-reduced-motion:reduce){#categories .category,#categories .category img,#categories .category:after{transition:none!important}}
+
+/* One clear action per card; the enclosing button retains category navigation. */
+#categories .category-cta{position:absolute;left:7%;right:7%;bottom:5%;z-index:3;display:flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:14px 20px;border:1px solid #e8e8e8;border-radius:999px;background:#fff;color:#252525;font-size:clamp(12px,.9vw,18px);line-height:1.2;letter-spacing:.025em;transition:background-color .2s,color .2s,border-color .2s;pointer-events:none;}
+#categories .category-cta>span{position:absolute;right:20px;}
+#categories .category:hover .category-cta,#categories .category:focus-visible .category-cta{background:#C21F1A;color:#fff;border-color:#C21F1A;}
+@media(max-width:700px){#categories .category-cta{min-height:42px;padding:11px 16px;font-size:12px}#categories .category-cta>span{right:14px}}
+
+/* Keep the rotated package inside the space between the title and action. */
+#categories .cat-art>.category-product{inset:auto;left:50%;top:49%;width:42%;height:47%;object-fit:contain;transform:translate(-50%,-50%) rotate(-12deg);transform-origin:center;}
+#categories .category:hover .cat-art>.category-product{transform:translate(-50%,-50%) rotate(-12deg);}

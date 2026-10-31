@@ -1,0 +1,18 @@
+.app-nav nav .contact-nav{color:#b5b5b5;transition:color .2s}
+.app-nav nav .contact-nav:hover,.app-nav nav .contact-nav:focus-visible{color:#C21F1A}
+#experience.contact-open{display:flex;flex-direction:column;overflow:hidden}
+#experience.contact-open .app-nav{flex:0 0 auto}
+#experience.contact-open #wallet{visibility:hidden}
+#contact-view{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 5%;background:#fff}
+.contact-layout{flex:1;min-height:0;display:grid;grid-template-columns:1.6fr 1fr;gap:6%;align-items:center}
+.contact-kicker,.contact-channel-label,.contact-channel-note,.contact-footer{font-size:10px;letter-spacing:.12em;color:#999}
+.contact-copy h1{font-size:clamp(32px,min(5.7vw,10svh),116px);font-weight:500;line-height:1.02;letter-spacing:-.055em;margin:24px 0}
+.contact-copy h1 em{font-style:normal;color:#C21F1A}
+.contact-copy p,.contact-channel p{font-size:clamp(12px,1vw,18px);line-height:1.75;color:#777;margin:0}
+.contact-channel{display:flex;flex-direction:column;align-items:center;text-align:center;border-left:1px solid #e8e8e8;padding:24px 0 24px 12%;gap:18px}
+.contact-qr{width:min(19vw,30svh,300px);aspect-ratio:1;background:#f6f6f5;border:1px solid #e5e5e5;display:grid;place-items:center;color:#aaa}
+.contact-qr>span{font-size:17px;letter-spacing:.12em}.contact-qr small{display:block;font-size:11px;letter-spacing:0;margin-top:10px}.contact-qr img{width:100%;height:100%;object-fit:contain;padding:16px;background:white}
+.contact-channel h2{font-size:18px;letter-spacing:-.025em;font-weight:500;margin:0}.contact-channel-note{font-size:8px;letter-spacing:.07em}
+.contact-footer{display:flex;justify-content:space-between;border-top:1px solid #e8e8e8;padding:18px 0;flex-shrink:0;font-size:9px}
+@media(max-width:700px){.contact-layout{grid-template-columns:1fr;gap:12px;align-content:center}.contact-copy h1{font-size:clamp(25px,7.7vw,42px);margin:10px 0;line-height:1}.contact-copy p{font-size:12px}.contact-kicker{font-size:8px}.contact-channel{border-left:0;border-top:1px solid #eee;padding:12px 0 0;gap:8px}.contact-qr{width:min(34vw,22svh)}.contact-channel h2{font-size:15px}.contact-channel p{font-size:11px}.contact-channel-label,.contact-channel-note{display:none}.contact-footer{padding:10px 0;font-size:8px}}
+@media(max-height:520px) and (min-width:701px){.contact-copy h1{font-size:8svh;margin:10px 0}.contact-channel{gap:8px;padding-top:0;padding-bottom:0}.contact-channel-note{display:none}.contact-qr{width:27svh}}

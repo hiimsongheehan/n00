@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+global.window={};require('../maker-decisions.js');
+const {aggregate,validate,publishRevision}=window.N00DecisionCore;
+const axes=[['광택',['맑은 광','펄광']],['발색',['은은','선명']]];
+const record=(choices,keywords)=>({product:'rose',concept:{choices,keywords}});
+const a={nickname:'A',records:[record([0,0],['맑은 광','은은']),record([1,1],['펄광','선명'])]};
+const b={nickname:'B',records:[record([0,0],['맑은 광','은은']),{product:'rose',concept:null}]};
+const profiles=[{name:'A',state:a},{name:'B',state:b}];
+assert.deepEqual(aggregate('rose',a,profiles,axes).map(q=>q.options.map(o=>o.count)),[[0,1],[0,1]],'latest submission per person, including maker-support override');
+assert.deepEqual(aggregate('rose',a,profiles,axes),aggregate('rose',b,profiles,axes),'same aggregate after switching profiles');
+const candidate={title:'기획 방향',summary:'결정 요약',decisions:axes.map(q=>({question:q[0],outcome:q[1][0],reason:'검토 근거'})),changeNote:''};
+assert.equal(validate(candidate,axes,false),'');assert.notEqual(validate(candidate,axes,true),'');assert.notEqual(validate({...candidate,decisions:[{outcome:'',reason:''}]},axes,false),'');
+const initial={draft:candidate,revisions:[]};const first=publishRevision(initial,candidate,'v1','2026-10-20T00:00:00Z');assert.equal(initial.revisions.length,0);assert.equal(first.draft,null);candidate.title='변경된 방향';assert.equal(first.revisions[0].title,'기획 방향');
+const next={...candidate,changeNote:'테스트 후 조정'};assert.equal(validate(next,axes,true),'');const second=publishRevision(first,next,'v2','2026-10-21T00:00:00Z');assert.equal(second.revisions.length,2);assert.equal(second.revisions[0].title,'기획 방향');assert.equal(first.revisions.length,1);const restored=JSON.parse(JSON.stringify(second));assert.equal(restored.revisions[1].changeNote,'테스트 후 조정');
+console.log('PASS: latest unique participation, support-only override, shared counts, validation, immutable history, stored revision round trip.');

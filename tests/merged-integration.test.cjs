@@ -1,0 +1,6 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.join(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),flow=fs.readFileSync(path.join(root,'flow.js'),'utf8'),studio=fs.readFileSync(path.join(root,'project-studio.js'),'utf8');
+for(const key of ['n00_exhibition_v2','n00_social_v1','n00_profiles_v1','n00_planning_votes_v1'])assert.ok(flow.includes(key));assert.ok(!flow.includes('n00_studio_preview'));assert.ok(!flow.includes("state.nickname='메이커 시안'"));
+const scripts=[...html.matchAll(/<script src="([^"?]+)[^"]*"/g)].map(x=>x[1]);for(const file of scripts)assert.ok(fs.existsSync(path.join(root,file)),file);assert.ok(scripts.indexOf('project-studio.js')<scripts.indexOf('flow.js'));assert.ok(scripts.indexOf('content-generation.js')<scripts.indexOf('project-studio.js'));assert.equal(scripts.filter(x=>x==='flow.js').length,1);
+assert.ok(studio.includes('next.owner=draftOwner'));assert.ok(studio.includes('registry.filter(row=>row.owner===getOwner())'));assert.ok(flow.includes('makerDecisions.mountManager(c)'));assert.ok(flow.includes('currentRewards().map(r=>r.min)'));
+console.log('PASS: original storage keys, no preview auto-entry, script dependency order, local modules, owner isolation, maker manager and custom rewards.');
