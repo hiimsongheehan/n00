@@ -14,6 +14,7 @@
    d: text('#concept-direction p'),
    k: text('#concept-keywords'),
    o: text('#concept-owner'),
+   s: text('#concept-status'),
    i: src.startsWith('assets/') ? src : '',
    r: document.querySelector('#taste-artifact').dataset.imageOrientation === 'horizontal' ? 1 : 0
   };

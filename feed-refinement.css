@@ -748,3 +748,9 @@
 .concept-actions .outline{transition:background .2s,color .2s,border-color .2s;}
 .concept-actions .outline:hover,.concept-actions .outline:focus-visible{background:#C21F1A;border-color:#C21F1A;color:#fff;}
 .concept-actions #taste-confirm{justify-content:center;text-align:center;}
+
+/* Receipt prints out from its top edge, last line first. */
+#fund-dialog[open]{mask:linear-gradient(#000 0 0) bottom/100% 100% no-repeat;animation:receipt-print 3.5s linear;}
+@keyframes receipt-print{from{translate:0 -100%;mask-size:100% 0%;}to{translate:0 0;mask-size:100% 100%;}}
+@media(prefers-reduced-motion:reduce){#fund-dialog[open]{animation:none;}}
+
