@@ -1,8 +1,18 @@
 (() => {
  const button = document.querySelector('#fullscreen-toggle');
  const feedback = document.querySelector('#fullscreen-feedback');
+ const tools = document.querySelector('#intro-tools');
+ const dot = document.querySelector('#intro-tools-dot');
  const active = () => document.fullscreenElement || document.webkitFullscreenElement;
+ function setOpen(open) {
+  tools.classList.toggle('is-open', open);
+  dot.setAttribute('aria-expanded', String(open));
+ }
+ dot.addEventListener('click', () => setOpen(!tools.classList.contains('is-open')));
+ document.addEventListener('pointerdown', event => { if (!tools.contains(event.target)) setOpen(false); });
  function sync() {
+  document.documentElement.classList.toggle('is-fullscreen', Boolean(active()));
+  if (active()) setOpen(false);
   button.textContent = active() ? '전체화면 닫기 ⛶' : '전체화면 ⛶';
   button.setAttribute('aria-pressed', String(Boolean(active())));
   button.setAttribute('aria-label', active() ? '전체화면 닫기' : '전체화면 보기');

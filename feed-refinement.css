@@ -484,10 +484,6 @@
  -webkit-mask-composite:source-in;mask-composite:intersect;
 }
 
-/* Quiet disclosure on the opening screen. */
-.stage .ai-model-notice{position:absolute;right:2%;top:50%;margin:0;writing-mode:vertical-rl;font-size:10px;line-height:1.5;letter-spacing:.035em;color:#888;transform:translateY(-50%);z-index:4;pointer-events:none;}
-@media(max-width:700px){.stage .ai-model-notice{right:10px;font-size:9px;}}
-
 /* Gloss maker note: full-width artwork with its own scrolling viewport. */
 #maker-note-dialog.image-detail{width:min(860px,calc(100vw - 112px));height:94svh;max-height:94svh;max-width:none;margin:3svh auto;padding:0;border:0;border-radius:0;background:transparent;overflow:visible;box-shadow:none;}
 #maker-note-dialog.image-detail::backdrop{background:rgba(0,0,0,.86);backdrop-filter:blur(5px);}
@@ -544,9 +540,31 @@
 .reel-funding{display:none;}
 #feed-view .video-mode .reel-funding{display:flex;position:absolute;inset:auto 0 0;z-index:2;justify-content:space-between;align-items:flex-end;padding:48px 5% 4.5%;pointer-events:none;color:rgba(255,255,255,.94);background:linear-gradient(0deg,rgba(0,0,0,.48),rgba(0,0,0,.14) 58%,transparent);font-family:'Apple SD Gothic Neo',sans-serif;font-size:clamp(24px,3.2svh,42px);font-weight:400;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums;text-shadow:0 1px 8px #00000010;}
 
-#fullscreen-toggle{position:absolute;left:5.1%;top:12px;z-index:6;border:0;background:rgba(255,255,255,.75);color:#999;font:inherit;font-size:11px;letter-spacing:.02em;padding:10px 12px;min-height:36px;transition:color .2s;}
+/* Opening-screen tools: replay plus a small dot that reveals the disclosure and fullscreen. */
+.intro-bar{position:absolute;left:5.1%;top:12px;z-index:6;display:flex;align-items:center;}
+.intro-tools{position:relative;}
+#intro-tools-dot{display:grid;place-items:center;width:36px;height:36px;padding:0;border:0;background:none;}
+#intro-tools-dot::before{content:"";width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.75);border:1px solid #999;transition:background .2s,border-color .2s;}
+.intro-tools-panel{position:absolute;left:0;top:100%;display:grid;gap:2px;width:max-content;max-width:min(300px,calc(100vw - 40px));padding:4px 12px;background:rgba(255,255,255,.75);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;}
+.intro-tools.is-open #intro-tools-dot::before,.intro-tools:has(:focus-visible) #intro-tools-dot::before{background:#C21F1A;border-color:#C21F1A;}
+.intro-tools.is-open .intro-tools-panel,.intro-tools:has(:focus-visible) .intro-tools-panel{opacity:1;visibility:visible;}
+@media(hover:hover){.intro-tools:hover #intro-tools-dot::before{background:#C21F1A;border-color:#C21F1A;}.intro-tools:hover .intro-tools-panel{opacity:1;visibility:visible;}}
+#fullscreen-toggle{justify-self:start;border:0;background:none;color:#999;font:inherit;font-size:11px;letter-spacing:.02em;padding:6px 0;transition:color .2s;}
 #fullscreen-toggle:hover{color:#C21F1A;}
-#fullscreen-feedback{position:absolute;left:5.1%;top:52px;z-index:6;font-size:11px;color:#777;max-width:260px;}
+.stage .ai-model-notice{margin:0;padding-bottom:4px;font-size:10px;line-height:1.5;letter-spacing:.035em;color:#888;}
+#fullscreen-feedback{font-size:11px;color:#777;}
+#fullscreen-feedback:empty{display:none;}
+.intro-bar .replay{display:flex;align-items:center;gap:6px;height:36px;padding:0 8px 0 4px;color:#999;letter-spacing:.02em;transition:color .2s;}
+.intro-bar .replay span{font-size:17px;line-height:1;}
+.intro-bar .replay small{font-size:11px;opacity:0;transition:opacity .2s;}
+.intro-bar .replay:hover,.intro-bar .replay:focus-visible{color:#C21F1A;}
+.intro-bar .replay:hover small,.intro-bar .replay:focus-visible small{opacity:1;}
+.is-fullscreen .intro-bar{display:none;}
+
+/* Opening screen: no footer captions, and a scroll cue that reads over any image. */
+.stage .footer{display:none;}
+.stage .hint{top:calc(12px + 2%);padding:11px 20px 9px;background:rgba(255,255,255,.92);color:#C21F1A;font-size:14px;font-weight:600;letter-spacing:.12em;white-space:nowrap;}
+.stage .hint span{font-size:24px;line-height:1;margin-top:2px;}
 
 /* Center the viewing group with breathing room; navigation stays out of its flow. */
 #feed-view:not(.participating) .feed-layout{
