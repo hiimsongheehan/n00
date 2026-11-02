@@ -4,23 +4,22 @@
 #experience.contact-open .app-nav{flex:0 0 auto}
 #experience.contact-open #wallet{visibility:hidden}
 #contact-view{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 5%;background:#fff}
-.contact-layout{flex:1;min-height:0;display:grid;grid-template-columns:1.6fr 1fr;gap:6%;align-items:center}
-.contact-kicker,.contact-channel-label,.contact-footer{font-size:10px;letter-spacing:.12em;color:#999}
+.contact-layout{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:center}
+.contact-footer{font-size:10px;letter-spacing:.12em;color:#999}
 .contact-copy h1{font-size:clamp(32px,min(5.7vw,10svh),116px);font-weight:500;line-height:1.02;letter-spacing:-.055em;margin:24px 0}
 .contact-copy h1 em{font-style:normal;color:#C21F1A}
 .contact-copy p,.contact-channel p{font-size:clamp(12px,1vw,18px);line-height:1.75;color:#777;margin:0}
-.contact-channel{display:flex;flex-direction:column;border-left:1px solid #e8e8e8;padding:24px 0 24px 12%;gap:14px}
-.contact-channel h2{font-size:18px;letter-spacing:-.025em;font-weight:500;margin:0}
-.contact-form{display:grid;gap:6px}
-.contact-form label{font-size:11px;color:#777;margin-top:6px}
-.contact-form input,.contact-form textarea{width:100%;border:0;border-bottom:1px solid #ddd;border-radius:0;background:none;padding:7px 0;font:inherit;font-size:14px;color:#141414;resize:none}
+.contact-channel{display:flex;flex-direction:column;border-left:1px solid #e8e8e8;padding:24px 0 24px 8%;gap:14px}
+.contact-channel h2{font-size:26px;letter-spacing:-.025em;font-weight:500;margin:0}
+.contact-form{display:grid;gap:8px}
+.contact-form label{font-size:16px;color:#555;margin-top:10px}
+.contact-form input,.contact-form textarea{width:100%;border:0;border-bottom:1px solid #ddd;border-radius:0;background:none;padding:10px 0;font:inherit;font-size:19px;color:#141414;resize:none}
 .contact-form input:focus,.contact-form textarea:focus{outline:0;border-bottom-color:#C21F1A}
 .contact-form .contact-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.contact-form button{margin-top:12px;width:100%}
+.contact-form button{margin-top:16px;width:100%;min-height:64px;font-size:20px}
 .contact-form button:disabled{opacity:.55;cursor:default}
-.contact-form p{min-height:1.5em;font-size:12px}.contact-form p.is-error{color:#C21F1A}
-#contact-mailto{font-size:12px;color:#141414}
-.contact-channel .contact-privacy{font-size:10px;color:#999}
+.contact-form p{min-height:1.5em;font-size:16px}.contact-form p.is-error{color:#C21F1A}
+#contact-mailto{font-size:16px;color:#141414}
 .contact-footer{display:flex;justify-content:space-between;border-top:1px solid #e8e8e8;padding:18px 0;flex-shrink:0;font-size:9px}
-@media(max-width:700px){.contact-layout{grid-template-columns:1fr;gap:12px;align-content:center}.contact-copy h1{font-size:clamp(25px,7.7vw,42px);margin:10px 0;line-height:1}.contact-copy p{font-size:12px}.contact-kicker{font-size:8px}.contact-channel{border-left:0;border-top:1px solid #eee;padding:12px 0 0;gap:8px}.contact-channel h2{font-size:15px}.contact-channel-label{display:none}.contact-footer{padding:10px 0;font-size:8px}#contact-view{overflow-y:auto}.contact-layout{flex:none;padding:12px 0}.contact-footer{margin-top:auto}}
-@media(max-height:680px) and (min-width:701px){.contact-copy h1{font-size:8svh;margin:10px 0}.contact-channel{gap:8px;padding-top:0;padding-bottom:0}#contact-view{overflow-y:auto}.contact-layout{flex:none;padding:12px 0}}
+@media(max-width:700px){.contact-layout{grid-template-columns:1fr;gap:12px;align-content:center}.contact-copy h1{font-size:clamp(25px,7.7vw,42px);margin:10px 0;line-height:1}.contact-copy p{font-size:12px}.contact-channel{border-left:0;border-top:1px solid #eee;padding:12px 0 0;gap:8px}.contact-channel h2{font-size:24px}.contact-footer{padding:10px 0;font-size:8px}#contact-view{overflow-y:auto}.contact-layout{flex:none;padding:12px 0}.contact-footer{margin-top:auto}}
+@media(max-height:820px) and (min-width:701px){.contact-copy h1{font-size:8svh;margin:10px 0}.contact-channel{gap:6px;padding-top:0;padding-bottom:0}.contact-form label{margin-top:4px}.contact-form input,.contact-form textarea{padding:6px 0}.contact-form textarea{height:4.6em}.contact-form button{margin-top:10px;min-height:56px}#contact-view{overflow-y:auto}.contact-layout{flex:none;padding:12px 0}.contact-footer{margin-top:auto}}
