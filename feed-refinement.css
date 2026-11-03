@@ -758,3 +758,13 @@
 @keyframes receipt-print{from{translate:0 -100%;mask-size:100% 0%;}to{translate:0 0;mask-size:100% 100%;}}
 @media(prefers-reduced-motion:reduce){#fund-dialog[open]{animation:none;}}
 
+/* Receipt header and the wide concept shot, laid on its side like the lab card. */
+#fund-dialog .receipt-heading{display:flex;flex-direction:column;align-items:center;gap:14px}
+#fund-dialog .receipt-heading h2{margin:0}
+#fund-dialog .receipt-logo{display:block;width:118px;height:auto;margin:0}
+#fund-dialog .receipt-maker{display:block;margin:0;font-size:12px;color:#999;letter-spacing:.02em;line-height:1}
+#fund-dialog .receipt-concept{background:none;padding:0 0 4px;margin-bottom:22px}
+#fund-dialog .receipt-shot{width:66.7%;margin:0 auto}
+#fund-dialog .receipt-shot>*{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+#fund-dialog .receipt-concept p{margin:12px 0 0}
+
