@@ -15,11 +15,11 @@
     const layer = document.createElement('div');
     layer.className = 'look-layer';
     const image = new Image();
-    image.src = `assets/looks/${i}-wide.png`;
+    image.src = `assets/looks/${i}-wide.jpg`;
     image.alt = look.name + ' 메이크업';
     const video = document.createElement('video');
     // Full-screen 16:9 footage generated from opaque white source artwork.
-    video.src = `assets/looks/${i}-wide.mp4`;
+    video.src = `assets/looks/${i}-wide.mp4?v=20261103`;
     video.muted = true;
     video.playsInline = true;
     video.preload = 'metadata';
@@ -59,7 +59,7 @@
     });
     document.querySelector('#look-name').textContent = looks[i].name;
     const nextFace = document.querySelector('.turn-face img');
-    nextFace.src = `assets/looks/${i}-wide.png`;
+    nextFace.src = `assets/looks/${i}-wide.jpg`;
     nextFace.alt = `${looks[i].name} — 선택한 메이크업 룩`;
     studio.dataset.look = String(i);
     playback();
