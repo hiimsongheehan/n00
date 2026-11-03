@@ -768,3 +768,6 @@
 #fund-dialog .receipt-shot>*{display:block;width:100%;height:auto;mix-blend-mode:multiply}
 #fund-dialog .receipt-concept p{margin:12px 0 0}
 
+/* Opening: portraits sit a little higher. */
+#journey .stage .portrait{transform:translateY(-4%)}
+
